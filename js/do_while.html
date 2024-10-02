@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let sayi, kare;
+        do{
+            sayi = Number(prompt("Sayi: "));
+        }while(sayi <= 0);
+        kare = sayi * sayi;
+
+        document.write("Sayi: " + sayi + " Sayının karesi: " + kare);
+        */
+       
+       
+        /*
+        for( let i = 0; i <= 5; i++){
+        //if(i == 3) break;   //döngüyü sonlandırır
+        if(i == 3) continue;
+        document.write("i = " + i + "<br>");
+       }
+        */
+
+        let n, s, f = 1;
+        n = Number(prompt("N değeri giriniz: "));
+        for(s = 1; s <= n; s++){
+            f = f * s;
+        }
+        document.write(f);
+    </script>
+</body>
+</html>

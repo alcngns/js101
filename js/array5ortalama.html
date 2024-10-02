@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let toplam = 0;
+        let ort = 0;
+        let dizi = new Array(5);
+        for(i = 0; i < dizi. length; i++){
+            dizi[i] = Number(prompt(i));
+        }
+        for(i = 0; i < dizi.length; i++){
+            document.write(i + " . eleman: " + dizi[i] + "<br>")
+        }
+        for(i = 0; i < dizi.length; i++){
+            toplam = toplam + dizi[i];
+        }
+        document.write("Dizi Toplamı: " + toplam + "<br>")
+        ort = (ort + toplam) / dizi.length
+        document.write("Dizi Ortalaması: " + ort)
+    </script>
+</body>
+</html>

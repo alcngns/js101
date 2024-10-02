@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="manset">İlk Manşet</h1>
+    <p id="ilk"></p>
+    <p id="ikinci"></p>
+    <img src="insta.webp" alt="github" id="bayrak" width="100px" height="100px" onmouseover="git()" onmouseout="insta()">
+    <script>
+        //icerik degistirme
+        document.getElementById("manset").innerHTML="Son Manşet!!!!";
+        document.getElementById("ilk").innerHTML="<b>ilk paragraf...</b>";
+        document.getElementById("ikinci").innerText="ikinci paragraf....";
+
+        //görsellestirme
+        document.getElementById("manset").style.color="red";
+        document.getElementById("manset").style.fontFamily="Arial";
+
+        //özellik degistirme
+        let bayragimiz=document.getElementById("bayrak");
+
+        function git(){
+            bayragimiz.src="github.png";
+        }
+
+        function insta(){
+            bayragimiz.src="insta.webp"
+        }
+    </script>
+</body>
+</html>

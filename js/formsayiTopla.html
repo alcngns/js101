@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Sayi1: <input type="text" id="sayi1"><br>
+        Sayi2: <input type="text" id="sayi2"><br>
+        Toplam: <span id="sonuc"></span><br>
+        <input type="button" value="Hesapla" onclick="topla()">
+    </form>
+    <script>
+        function topla(){
+            let sayi1, sayi2, Toplam;
+
+            sayi1=Number(document.getElementById("sayi1").value);
+            sayi2=Number(document.getElementById("sayi2").value);
+
+            Toplam=sayi1+sayi2;
+            document.getElementById("sonuc").innerHTML=Toplam;
+        }
+    </script>
+</body>
+</html>

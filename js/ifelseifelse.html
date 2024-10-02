@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var not = Number(prompt("Notu giriniz: "));
+        if (not > 0 && not < 45) {
+            document.write("Kötü");
+        }else if (not >= 45 && not < 65) { 
+            document.write("Orta");
+        }else if (not >= 66 && not < 75) {
+            document.write("İyi");
+        }else if (not >= 75 && not <= 100) {
+            document.write("Çok iyi");
+        }else{
+            document.write("Geçersiz not girdiniz.")
+        }
+    </script>
+</body>
+</html>

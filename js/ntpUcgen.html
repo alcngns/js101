@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sınıf oluştur
+        class Ucgen{
+            static genislik = 0;
+            static yukseklik = 0;
+
+            alan(){
+                return (this.genislik * this.yukseklik) / 2;
+            }
+        }
+
+        //nesne olustur
+        let u1 = new Ucgen();
+        u1.genislik = 10;
+        u1.yukseklik = 20;
+        document.write("u1 alan: " + u1.alan());
+
+        
+        document.write("<br>")
+        //nesne olustur
+        let u2 = new Ucgen();
+        u2.genislik = Number(prompt("u2 genislik: "));
+        u2.yukseklik = Number(prompt("u2 yukseklik: "));
+        document.write("u2 alan: " + u2.alan());
+    </script>
+</body>
+</html>

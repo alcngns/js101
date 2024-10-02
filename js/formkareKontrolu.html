@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kare Hesabi</title>
+</head>
+<body onload="odaklan()">
+    <form>
+        Sayi: <input type="text" id="sayi"><br>
+        Karesi: <span id="sonuc"></span><br>
+        <input type="button" value="Hesapla" onclick="kareal()"><br>
+    </form>
+    <script>
+        
+        function odaklan(){
+            document.getElementById("sayi").style.backgroundColor="aqua";
+            document.getElementById("sayi").focus();
+        }
+        
+        function kareal(){
+            let sayi=document.getElementById("sayi").value;
+            if(sayi==""){
+                alert("Lütfen forma sayı giriniz!");
+                document.getElementById("sayi").style.backgroundColor="red";
+                document.getElementById("sayi").focus();
+            }
+            else{
+                sayi=Number(sayi);
+                if(sayi<=0){
+                    alert("Pozitif sayı giriniz.");
+                    document.getElementById("sayi").style.backgroundColor="red";
+                    document.getElementById("sayi").focus();
+
+                }
+                else{
+                    let kare=sayi*sayi;
+                    document.getElementById("sonuc").innerHTML=kare;
+                    document.getElementById("sayi").style.backgroundColor="green";
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ile Throw Uygulaması</title>
+</head>
+<body>
+    <h2>Form ile Throw Uygulaması</h2>
+    <form>
+        Ders Notu: <input type="text" id="dersnotu"><br>
+        <input type="button" value="Kontrol Et" onclick="kontrol()">
+        <p id="hatailetisi"></p>
+        <p id="girilendeger"></p>
+    </form>
+
+    <script>
+        function kontrol(){
+            let dersnotu, hatailetisi;
+            
+            //önceden kalan hata iletisi varsa siliyoruz
+            hatailetisi=document.getElementById("hatailetisi");
+            hatailetisi.innerHTML="";
+
+            //dersnotunu alalım
+            dersnotu=document.getElementById("dersnotu").value;
+
+            //hata denetimi yapalım burada
+            try {
+                if(dersnotu=="") throw new Error("Ders notu girilmemiş.");
+                
+                if(isNaN(dersnotu)) throw new Error("Sayısal değer girilmemiş.");
+                
+                dersnotu=Number(dersnotu);
+                
+                if(dersnotu<0 || dersnotu>10) throw new Error("Ders notu 0-10 arasında girilmeli.");
+                
+
+            //hatayı yakala ve yazdır        
+            } catch(err){
+                hatailetisi.innerHTML=err;
+            }
+
+            //hata olsa da olmasa da kodlar çalışsın
+            //girilen değerler yazdırılsın
+            finally{
+                document.getElementById("girilendeger").innerHTML="Girilen değer: "+dersnotu;
+            }
+
+        }
+    </script>
+</body>
+</html>

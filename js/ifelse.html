@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var age = Number(prompt("Yaş: "));
+        if (age < 18) {
+            document.write("Yaşınız 18'den küçük.")
+        } else {
+            document.write("Yaşınız 18'den büyük.")
+        }
+        */
+
+        var sinav1 = Number(prompt("Vizeyi giriniz: "));
+        var sinav2 = Number(prompt("Finali giriniz: "));
+        var ort = (sinav1 + sinav2) / 2;
+        if (ort < 60) {
+            document.write("Vize notunuz: " + sinav1 + " Final notunuz: " + sinav2 + " Ortalamanız: " + ort);
+            document.write("<br>")
+            document.write(" Dersten geçemediniz...")
+        } else {
+            document.write("Vize notunuz: " + sinav1 + " Final notunuz: " + sinav2 + " Ortalamanız: " + ort);
+            document.write("<br>")
+            document.write(" Dersten başarılı bir şekilde geçtiniz...")
+        }
+    </script>
+</body>
+</html>

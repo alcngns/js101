@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Linkler</h2>
+    <a href="index.html">Anasayfa</a> |
+    <a href="bizkimiz.html">Biz Kimiz?</a> |
+    <a href="iletisim.html">İletişim</a>
+    <h2>Resimler</h2>
+    <img src="insta.webp" alt="insta" width="100px" height="100px">
+    <img src="github.png" alt="github" width="100px" height="100px">
+    <h2>Form</h2>
+    <form name="test">
+        Ad: <input type="text"><br>
+        Soyad: <input type="text"><br>
+        <input type="button" value="Gönder" onclick="yaz()"> 
+        <input type="reset" value="İptal"><br>
+    </form>
+
+    <script>
+        //document dizileri
+        document.write("Toplam link sayısı: "+document.links.length+"<br>");
+        document.write("Toplam resim sayısı: "+document.images.length+"<br>");
+        document.write("Toplam form sayısı: "+document.forms.length+"<br>");
+        document.write("Formun içindeki toplam eleman sayısı: "+document.forms["test"].length);
+
+        function yaz(){
+            let test=document.forms["test"];
+            for(let i=0; i<test.length; i++){
+                document.write(test.elements[i].value+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

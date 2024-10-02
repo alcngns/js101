@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        function yazxy(x, y){
+            while(x <= y){
+                document.write("x: " + x + "<br>");
+                x++;
+            }
+        }
+
+        let a = Number(prompt("a: "));
+        let b = Number(prompt("b: "));
+
+        yazxy(a, b);
+        */
+
+        /*
+        function nTopla(x){
+            let toplam = 0;
+            for(let i = 0; i <= x; i++){
+                toplam = toplam + i;
+            }
+            return toplam;
+        }
+
+        let n= Number(prompt("n: "));
+        alert("1 ile " + n + " arası sayıların toplamı: " + nTopla(n));
+        */
+
+        function fakto(x){
+            let f = 1;
+            for(let s = 1; s <= x; s++){
+                f = f * s;
+            }
+            return f;
+        }
+
+        let n = Number(prompt("n: "));
+        alert("n!'in değeri: " + fakto(n));
+    </script>
+</body>
+</html>
